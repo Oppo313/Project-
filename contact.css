@@ -1,0 +1,138 @@
+
+
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8a2be2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 13px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: white;
+}
+
+input[type=submit] {
+    background-color: #8a2be2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    float: left;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+input[type=submit]:hover {
+    background: white;
+    color: #8a2be2;
+    transform: scale(1.1);
+}
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+textarea::placeholder {
+    color: white;
+    font-size: 13px;
+}
+
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#fname {
+    animation: slideBottom 1s ease forwards;
+}
+
+#lname {
+    animation: slideBottom 1s ease forwards;
+}
+
+#sel {
+    animation: slideBottom 1s ease forwards;
+}
+
+#area {
+    animation: slideRight 1.5s ease forwards;
+}
+
+#btn {
+    animation: slideLeft 0.9s ease forwards;
+}
+
+@media screen and (max-width:600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

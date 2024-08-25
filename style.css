@@ -1,0 +1,252 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.bag {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #8a2be2 0%, #8010e9 28.53%, #1d0335 75.53%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.bag-text {
+    animation: slidedown 1s ease forwards;
+}
+
+.bag-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.bag-text h1 {
+    font-size: 90px;
+    line-height: 1;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 0 0 45px;
+}
+
+.bag-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.bag-text p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.main-img img {
+    width: 450px;
+    border-radius: 300px;
+    height: auto;
+    animation: slideLeft 1s ease forwards;
+}
+
+.bag-text .buy {
+    display: inline-block;
+    color: white;
+    background: #8010e9;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;    
+    transition: all 0.55s ease;
+}
+
+.bag-text .buy:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+@media (max-width:1535px) {
+    header {
+        padding: 15px 3%;
+        transition: 0.2s;
+    }
+}
+
+@media (max-width:1460px) {
+    section {
+        padding: 0 12%;
+        transition: 0.2s;
+    }
+}
+
+@media (max-width:1340px) {
+    .main-img img {
+        width: 300px;
+        height: auto;
+    }
+
+    .bag-text h1 {
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+
+    .bag-text h5 {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width:1195px) {
+    section {
+        padding: 0 3%;
+        transition: 0.2s;
+    }
+
+    .bag-text {
+        padding-top: 115px;
+    }
+
+    .main-img {
+        text-align: center;
+    }
+
+    .main-img img {
+        width: 300px;
+        height: auto;
+    }
+
+    .bag {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:990px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 16vh;
+        background: #5d1a9c;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 20px;
+        transition: all 0.55s ease;
+    }
+
+    .navlist a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navlist.open {
+        right: 0;
+    }
+}
+
+@media (max-width:680px) {
+    .main-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
